@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Rekognition-Handson</title>
+</head>
+<body>
+    <div id="app">
+        <h2>有名人識別ハンズオン - ver.2</h2>
+        <input type="file" @change="onChange">
+        <div v-if="imagePreview">
+            <hr/>
+            <button @click="onSubmit">画像解析を実行</button><br/><br/>
+            <img :src="imagePreview" width="300"/>
+        </div>
+        <div v-if="isLoading">
+            <p>画像を送信中...</p>
+        </div>
+        <div v-if="celebrityInfo.name">
+            <p>名前：{{ celebrityInfo.name }}</p>
+            <p>確度：{{ celebrityInfo.confidence }} %</p>
+        </div>
+        <div v-if="celebrityInfo.errorMessage">
+            <p>{{ celebrityInfo.errorMessage }}</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
