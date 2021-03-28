@@ -4,8 +4,8 @@
 ## 本リポジトリについて
 - 以前執筆した以下の記事を、AWS Chalice と Vue.js を用いて作り直してみた取り組みです。  
   - [【AWSハンズオン】サーバレスアーキテクチャで、有名人識別サービスを作ろう！ - Qiita](https://qiita.com/hayate_h/items/2091dda98bb07f758f06)
-- 詳細について、あたらしく記事を執筆しました。ご参照ください。
-  - [Qiita]()
+- 本ソースコードの詳細について、あたらしく記事を執筆しました。ご参照ください。
+  - [【AWS-Chalice】multipart/form-data の形式でアップロードされたバイナリファイルの扱い方 （有名人識別サービスをChaliceで作るハンズオン付き！） - Qiita](https://qiita.com/hayate_h/items/5fb481f9d8b4f19eab65)
 
 ## AWS Chalice について
 - AWS Chalice とは、AWS が OSS として開発・提供している、Python を用いたサーバレスフレームワークです。
@@ -119,8 +119,14 @@ $ python -m http.server 8080
 - 問題： multipart/form-data 形式で送ったファイルが utf-8 に再エンコードされてしまう。
 - 解決： `app.api.binary_types.append('multipart/form-data')`を挿入することで解決。
 - 参考：本トラブルの詳細と解決法について、以下ブログに記載しました。ご参照ください。
-    - Qiita
+    - Qiita: [https://qiita.com/hayate_h/items/5fb481f9d8b4f19eab65](https://qiita.com/hayate_h/items/5fb481f9d8b4f19eab65)
 
+## ライセンス
+- [MIT](https://github.com/cloud8high/rekognition-handson-chalice-v2/blob/main/LICENSE)
+
+## 作成者
+- [GitHub](https://github.com/cloud8high)
+- [Qiita](https://qiita.com/hayate_h)
 
 ## 参考資料等
 - Chalice
