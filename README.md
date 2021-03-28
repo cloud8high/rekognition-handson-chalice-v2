@@ -112,6 +112,8 @@ $ python -m http.server 8080
 なお、index.html や main.js を更新した際、サーバーを再起動しても更新後のファイルがロードされないことがあります。  
 その際はターミナルを一度停止し、開き直してサーバーも再起動することで解決します。
 
+## 動作イメージ
+[YouTube](https://youtu.be/E35YKHVjWJA) に動作画面をアップロードしています。
 
 ## ソースコードのポイント
 #### multipart/form-data で送ったファイルが Chalice で正常に読み込めない!
@@ -124,9 +126,10 @@ $ python -m http.server 8080
 ## ライセンス
 - [MIT](https://github.com/cloud8high/rekognition-handson-chalice-v2/blob/main/LICENSE)
 
-## 作成者
-- [GitHub](https://github.com/cloud8high)
+## 作成者について
 - [Qiita](https://qiita.com/hayate_h)
+- [Twitter](https://twitter.com/cloud8high)
+- [GitHub](https://github.com/cloud8high)
 
 ## 参考資料等
 - Chalice
@@ -149,7 +152,7 @@ $ python -m http.server 8080
 
 #### profile を指定した chalice deploy コマンドについて
 プロファイルを指定してデプロイする場合、リージョン情報を求められることがある。
-```
+```shell
 $ export AWS_DEFAULT_REGION=ap-northeast-1
 $ chalice deploy --profile $PROFILE_NAME
 ```
